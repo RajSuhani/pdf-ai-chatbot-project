@@ -1,0 +1,21 @@
+# Python
+venv/
+backend/venv/
+__pycache__/
+*.pyc
+.env
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# Uploads
+uploads/
+backend/uploads/
+
+# ChromaDB
+chroma_db/
+backend/chroma_db/
+
+# OS
+.DS_Store
