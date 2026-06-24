@@ -1,11 +1,17 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://127.0.0.1:8000",
+  baseURL: import.meta.env.VITE_API_URL
 });
 
-export const uploadPDF = (formData) =>
-  API.post("/upload", formData);
+export const uploadPDF = (formData) => {
+  return API.post("/upload", formData, {
+    headers: {
+      "Content-Type": "multipart/form-data"
+    }
+  });
+};
 
-export const askQuestion = (data) =>
-  API.post("/ask", data);
+export const askQuestion = (data) => {
+  return API.post("/ask", data);
+};
